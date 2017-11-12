@@ -4,3 +4,10 @@ function findMatching(drivers, string){
    return word.toLowerCase() === string.toLowerCase()
   })
 }
+
+
+function fuzzyMatch(drivers, string){
+  return drivers.filter(function(driver){
+    return driver.indexOf(string) == 0
+  })
+}
